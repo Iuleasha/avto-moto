@@ -1,0 +1,15 @@
+@import "../../variables/variables";
+
+.page__header {
+  background-color: $headerFooterBackground;
+}
+
+.page__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 6px;
+}
+
+@media (max-width: $tabletWidth) {
+  position: relative;
+}

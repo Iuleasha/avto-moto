@@ -1,0 +1,60 @@
+@import "variables/variables";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans-Regular"), local("OpenSans-Regular"),
+  url("./fonts/OpenSans-Regular.woff") format("woff"),
+  url("./fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans-SemiBold"), local("OpenSans-SemiBold"),
+  url("./fonts/OpenSans-SemiBold.woff") format("woff"),
+  url("./fonts/OpenSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans-Bold"), local("OpenSans-Bold"),
+  url("./fonts/OpenSans-Bold.woff") format("woff"),
+  url("./fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  font-weight: 400;
+  color: $primaryTextColor;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  max-width: 1182px;
+  margin: 0 auto;
+}

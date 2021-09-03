@@ -1,0 +1,44 @@
+@import "../../variables/variables";
+
+.slider {
+  width: 600px;
+  margin-top: 16px;
+}
+
+.slider__active {
+  position: relative;
+  margin-bottom: 39px;
+}
+
+.slider__status {
+  width: 122px;
+  height: 30px;
+  display: flex;
+  background-color: $activeButtonColor;
+  position: absolute;
+  color: $activeButtonFont;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__right-arrow {
+  transform: rotateY(180deg);
+}
+
+.slider__thumbnails--active {
+  transform: scale(1.1);
+  transition: transform .3s;
+}
+
+.slider__image {
+  background-color: $headerFooterBackground;
+}

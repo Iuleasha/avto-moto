@@ -1,0 +1,34 @@
+@import "../../../variables/variables";
+
+.icons {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.icons__item {
+  list-style: none;
+  color: $iconsDescriptionColor;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 7px;
+  min-width: 70px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.icons__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.icons__image {
+  opacity: 0.5;
+  padding-bottom: 10px;
+}
+
