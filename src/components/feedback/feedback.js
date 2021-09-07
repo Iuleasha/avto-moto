@@ -1,13 +1,14 @@
 import Button from '../button/button'
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { buttonTypes, RATING_STARS } from '../../constsnts/constants'
 import './feedback.scss'
-import { getRating, getTimeAgo } from '../../utils/utils'
+import { getRating, getTimeAgo, uniqueId } from '../../utils/utils'
 import FeedbackDialog from '../popup/feedbackDialog'
-import { getComments } from '../../services/comments.service'
+import { feedbackArray, getComments } from '../../services/comments.service'
 
 function Feedback() {
-    const comments = useMemo(() => getComments(), [])
+    const _comments = feedbackArray
+    const [comments, setComments] = useState(_comments)
     const [popupStatus, switchPopup] = useState(false)
 
     useEffect(() => {
@@ -17,6 +18,10 @@ function Feedback() {
             document.body.style.overflow = 'unset'
         }
     }, [popupStatus])
+
+    useEffect(() => {
+        setComments(getComments())
+    }, [_comments])
 
     return (
         <div className="feedback">
@@ -30,7 +35,7 @@ function Feedback() {
                 />
             </div>
             {comments.map((item) => (
-                <div className="feedback__item">
+                <div className="feedback__item" key={uniqueId()}>
                     <p className="feedback__name">{item.name}</p>
                     {item.dignity && (
                         <>
@@ -58,6 +63,7 @@ function Feedback() {
                         <div className="feedback__rating">
                             {RATING_STARS.map((ratingItem) => (
                                 <span
+                                    key={uniqueId()}
                                     className={`feedback__rating-star ${
                                         String(ratingItem) === item.rating
                                             ? 'feedback__rating-star--active'
