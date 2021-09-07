@@ -57,6 +57,7 @@
 @media screen and (max-width: $mobileWidth) {
     .description {
         margin-top: 20px;
+        width: 100%;
     }
     .description__price {
         display: flex;
