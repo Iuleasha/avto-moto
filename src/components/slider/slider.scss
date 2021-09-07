@@ -48,6 +48,7 @@
 
 .slider__image {
     background-color: $headerFooterBackground;
+    width: 100%;
 }
 
 @media screen and (max-width: $tabletWidth) {

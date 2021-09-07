@@ -11,8 +11,10 @@ export function addComments(comments) {
 }
 
 export function getComments() {
-    if (!feedbackArray.length) {
-        feedbackArray = JSON.parse(window.localStorage.getItem('feedbackArray'))
+    const localFeedbackArray = window.localStorage.getItem('feedbackArray')
+
+    if (!feedbackArray.length && localFeedbackArray) {
+        feedbackArray = JSON.parse(localFeedbackArray)
     }
 
     return feedbackArray
