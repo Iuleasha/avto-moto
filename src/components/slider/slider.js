@@ -5,6 +5,7 @@ import '../../visually-hidden/visually-hidden.scss'
 import './slider.scss'
 import Arrow from './arrow/arrow'
 import { useCallback, useMemo, useState } from 'react'
+import { uniqueId } from '../../utils/utils'
 
 function Slider() {
     const images = useMemo(() => [slide1, slide2, slide3], [])
@@ -64,6 +65,7 @@ function Slider() {
                                     : ''
                             }`}
                             onClick={() => setActiveSlide(index)}
+                            key={uniqueId()}
                         >
                             <img
                                 src={item}
