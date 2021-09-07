@@ -35,7 +35,7 @@ function Navigation() {
                         <a
                             className="nav__list-link"
                             aria-label={item.text}
-                            href="#"
+                            href="/"
                         >
                             {item.text}
                         </a>

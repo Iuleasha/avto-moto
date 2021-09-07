@@ -8,7 +8,7 @@ function Footer() {
                     <a
                         className="page__footer-link"
                         aria-label="Корпоративным клиентам"
-                        href="#"
+                        href="/"
                     >
                         Корпоративным клиентам
                     </a>
@@ -17,7 +17,7 @@ function Footer() {
                     <a
                         className="page__footer-link"
                         aria-label="Клиентам"
-                        href="#"
+                        href="/"
                     >
                         Клиентам
                     </a>
@@ -26,7 +26,7 @@ function Footer() {
                     <a
                         className="page__footer-link"
                         aria-label="Аренда авто"
-                        href="#"
+                        href="/"
                     >
                         Аренда авто
                     </a>
@@ -35,7 +35,7 @@ function Footer() {
                     <a
                         className="page__footer-link"
                         aria-label="Каршеринг"
-                        href="#"
+                        href="/"
                     >
                         Каршеринг
                     </a>
@@ -44,7 +44,7 @@ function Footer() {
                     <a
                         className="page__footer-link"
                         aria-label="Как продать авто"
-                        href="#"
+                        href="/"
                     >
                         Как продать авто
                     </a>
@@ -53,7 +53,7 @@ function Footer() {
                     <a
                         className="page__footer-link"
                         aria-label="Trade-in"
-                        href="#"
+                        href="/"
                     >
                         Trade-in
                     </a>
@@ -62,7 +62,7 @@ function Footer() {
                     <a
                         className="page__footer-link"
                         aria-label="Test drive"
-                        href="#"
+                        href="/"
                     >
                         Test drive
                     </a>

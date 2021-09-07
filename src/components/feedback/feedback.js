@@ -4,10 +4,10 @@ import { buttonTypes, RATING_STARS } from '../../constsnts/constants'
 import './feedback.scss'
 import { getRating, getTimeAgo } from '../../utils/utils'
 import FeedbackDialog from '../popup/feedbackDialog'
-import { feedbackArray, getComments } from '../../services/comments.service'
+import { getComments } from '../../services/comments.service'
 
 function Feedback() {
-    const comments = useMemo(() => getComments(), [feedbackArray])
+    const comments = useMemo(() => getComments(), [])
     const [popupStatus, switchPopup] = useState(false)
 
     useEffect(() => {

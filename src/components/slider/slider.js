@@ -35,7 +35,7 @@ function Slider() {
 
             setActiveSlide(activeSlide - 1)
         },
-        [setActiveSlide, activeSlide, images]
+        [setActiveSlide, activeSlide]
     )
 
     return (
