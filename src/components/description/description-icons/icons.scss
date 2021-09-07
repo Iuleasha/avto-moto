@@ -1,34 +1,42 @@
-@import "../../../variables/variables";
+@import '../../../variables/variables';
 
 .icons {
-  display: flex;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
 
 .icons__item {
-  list-style: none;
-  color: $iconsDescriptionColor;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 7px;
-  min-width: 70px;
+    list-style: none;
+    color: $iconsDescriptionColor;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 7px;
 
-  &:last-child {
-    margin-right: 0;
-  }
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .icons__wrapper {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.icons__text {
+    line-height: 22px;
 }
 
 .icons__image {
-  opacity: 0.5;
-  padding-bottom: 10px;
+    opacity: 0.5;
+    padding-bottom: 10px;
 }
 
+@media screen and (max-width: $mobileWidth) {
+    .icons {
+        justify-content: space-between;
+    }
+}

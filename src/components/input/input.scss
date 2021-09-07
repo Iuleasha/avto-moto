@@ -1,0 +1,42 @@
+@import '../../variables/variables';
+
+.input {
+    max-width: 300px;
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 14px;
+    line-height: 19px;
+    border: 1px solid rgba(72, 73, 77, 0.2);
+
+    &--error {
+        border: 1px solid $footnotesColor;
+    }
+}
+
+.input-wrapper {
+    width: 100%;
+}
+
+.input--required {
+    position: relative;
+
+    &:after {
+        content: '*';
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-size: 17px;
+        line-height: 20px;
+        color: $activeButtonColor;
+    }
+}
+
+@media screen and (max-width: $mobileWidth) {
+    .input {
+        width: 100%;
+        min-width: auto;
+    }
+    .input--required:after {
+        top: 9px;
+    }
+}

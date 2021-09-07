@@ -1,0 +1,25 @@
+@import '../../variables/variables';
+
+.tabs {
+    padding: 0 18px 140px 18px;
+}
+
+.tabs__wrapper {
+    display: flex;
+}
+
+@media (max-width: $tabletWidth) {
+    .tabs {
+        padding: 0 21px 80px 21px;
+    }
+}
+
+@media (max-width: $mobileWidth) {
+    .tabs {
+        padding: 0 16px 40px 16px;
+    }
+    .tabs__wrapper {
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+}

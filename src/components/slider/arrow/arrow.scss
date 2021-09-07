@@ -1,23 +1,23 @@
-@import "../../../variables/variables";
+@import '../../../variables/variables';
 
 .slider__arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid $borderColor;
-  min-width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  transform: rotateY(180deg);
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $borderColor;
+    min-width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    transform: rotateY(180deg);
+    cursor: pointer;
 
-  &--right {
-    transform: unset;
-  }
-
-  &--disabled {
-    .slider__svg {
-      opacity: 0.3;
+    &--right {
+        transform: unset;
     }
-  }
+
+    &--disabled {
+        .slider__svg {
+            opacity: 0.3;
+        }
+    }
 }

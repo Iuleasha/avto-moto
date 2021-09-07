@@ -1,6 +1,6 @@
-import '../../visually-hidden/visually-hidden.scss';
-import {uniqueId} from '../../utils/utils';
-import './navigation.scss';
+import '../../visually-hidden/visually-hidden.scss'
+import { uniqueId } from '../../utils/utils'
+import './navigation.scss'
 
 const navigation = [
     {
@@ -15,7 +15,7 @@ const navigation = [
     {
         text: 'Вакансии',
     },
-];
+]
 
 function Navigation() {
     return (
@@ -26,9 +26,7 @@ function Navigation() {
                 type="checkbox"
             />
             <label htmlFor="nav-toggle" className="nav__menu-wrapper">
-                <span className="nav__menu">
-                Меню
-                </span>
+                <span className="nav__menu">Меню</span>
             </label>
 
             <ul className="nav__list">
@@ -45,7 +43,7 @@ function Navigation() {
                 ))}
             </ul>
         </nav>
-    );
+    )
 }
 
-export default Navigation;
+export default Navigation

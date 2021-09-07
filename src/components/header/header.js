@@ -1,17 +1,17 @@
-import Logo from '../logo/logo';
-import Navigation from '../navigation/navigation';
-import './header.scss';
+import Logo from '../logo/logo'
+import Navigation from '../navigation/navigation'
+import './header.scss'
 
 function Header() {
     return (
         <header className="page__header">
             <div className="content page__header-wrapper">
-                <Logo/>
+                <Logo />
 
-                <Navigation/>
+                <Navigation />
             </div>
         </header>
-    );
+    )
 }
 
-export default Header;
+export default Header

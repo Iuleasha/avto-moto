@@ -1,0 +1,53 @@
+@import '../../variables/variables';
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.star-rating__input {
+    display: none;
+
+    &:checked {
+        ~ .star-rating__label {
+            &:after {
+                color: $activeButtonColor;
+            }
+        }
+
+        + .star-rating__label {
+            &:after {
+                color: $activeButtonColor;
+            }
+        }
+    }
+}
+
+.star-rating__label {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    cursor: pointer;
+
+    &:not(:first-child) {
+        padding-right: 8px;
+    }
+
+    &:after {
+        content: '★';
+        display: block;
+        font-size: 21px;
+        line-height: 18px;
+        color: rgba(189, 190, 194, 0.7);
+        transition: color 0.2s;
+    }
+}
+
+@media screen and (max-width: $mobileWidth) {
+    .star-rating__label {
+        &:after {
+            font-size: 27px;
+            line-height: 1;
+        }
+    }
+}

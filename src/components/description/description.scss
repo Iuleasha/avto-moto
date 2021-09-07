@@ -1,10 +1,75 @@
+@import '../../variables/variables';
+
 .description {
-  margin-left: 57px;
+    margin-left: 57px;
+    width: 100%;
 }
 
 .description__title {
-  margin: 0;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 28px;
+    margin: 0 0 28px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.description__price {
+    margin: 37px 0;
+}
+
+.description__actual-price {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    margin-right: 30px;
+}
+
+.description__old-price {
+    color: $iconsDescriptionColor;
+    font-size: 20px;
+    line-height: 27px;
+    position: relative;
+}
+
+.description__old-line {
+    position: absolute;
+    top: 6px;
+    right: -12px;
+}
+
+.description__primary {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: $tabletWidth) {
+    .description {
+        margin: 60px 0 0 0;
+    }
+    .description__price {
+        margin: 30px 0;
+    }
+    .description__buttons {
+        display: flex;
+        align-items: flex-start;
+    }
+    .description__primary {
+        margin: 0 30px 0 0;
+    }
+}
+
+@media screen and (max-width: $mobileWidth) {
+    .description {
+        margin-top: 20px;
+    }
+    .description__price {
+        display: flex;
+        flex-direction: column;
+    }
+    .description__old-line {
+        left: -5px;
+    }
+    .description__buttons {
+        flex-direction: column;
+    }
+    .description__primary {
+        margin-bottom: 20px;
+    }
 }

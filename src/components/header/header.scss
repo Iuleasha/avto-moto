@@ -1,15 +1,18 @@
-@import "../../variables/variables";
+@import '../../variables/variables';
 
 .page__header {
-  background-color: $headerFooterBackground;
+    background-color: $headerFooterBackground;
 }
 
 .page__header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 6px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 6px;
+    margin: 0 auto;
 }
 
-@media (max-width: $tabletWidth) {
-  position: relative;
+@media screen and (max-width: $tabletWidth) {
+    .page__header-wrapper {
+        padding: 15px;
+    }
 }

@@ -1,0 +1,36 @@
+@import '../../variables/variables';
+
+.characteristics__list {
+    width: 565px;
+}
+
+.characteristics__item {
+    border-bottom: 1px solid $borderColor;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 8px 0;
+    line-height: 22px;
+}
+
+.characteristics__text {
+    color: $black;
+}
+
+@media (max-width: $tabletWidth) {
+    .characteristics__list {
+        width: 100%;
+        margin-top: 35px;
+    }
+    .characteristics__item {
+        line-height: 19px;
+    }
+    .characteristics__text {
+        font-weight: 600;
+    }
+}
+
+@media (max-width: $mobileWidth) {
+    .characteristics__title {
+        width: 50%;
+    }
+}

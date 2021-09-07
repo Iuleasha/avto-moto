@@ -1,0 +1,139 @@
+@import '../../variables/variables';
+
+.feedback {
+    position: relative;
+    margin-top: 30px;
+}
+
+.feedback__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.feedback__item {
+    border-bottom: $itemFeedbackLine;
+    padding-bottom: 20px;
+    margin: 0 0 20px 0;
+}
+
+.feedback__name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    margin: 0;
+}
+
+.feedback__title {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: $black;
+    margin: 13px 0 3px 0;
+
+    &:before {
+        color: $activeButtonColor;
+        margin-right: 10px;
+    }
+
+    &--plus:before {
+        content: '+';
+    }
+
+    &--minus:before {
+        content: '-';
+    }
+}
+
+.feedback__value {
+    display: block;
+    margin: 0;
+    font-size: 15px;
+    line-height: 20px;
+    color: $black;
+
+    &--space {
+        margin-left: 15px;
+    }
+}
+
+.feedback__rating {
+    margin: 20px 0 0 0;
+}
+
+.feedback__time {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 30px 0 0 0;
+}
+
+.feedback__date {
+    color: $black;
+    opacity: 0.4;
+}
+
+.feedback__status {
+    font-size: 15px;
+    line-height: 20px;
+    color: $activeButtonColor;
+    margin-left: 20px;
+
+    &--answer {
+        font-size: 16px;
+        line-height: 22px;
+        cursor: pointer;
+    }
+}
+
+.feedback__rating-stars {
+    display: flex;
+    margin: 20px 0 30px 0;
+}
+
+.feedback__rating-star {
+    color: $activeButtonColor;
+    margin-right: 5px;
+}
+
+.feedback__rating-star--active ~ .feedback__rating-star {
+    color: $starColor;
+}
+
+@media (max-width: $tabletWidth) {
+    .feedback__button {
+        position: relative;
+        padding-bottom: 30px;
+    }
+
+    .feedback__name {
+        margin-bottom: 8px;
+    }
+    .feedback__value {
+        margin-bottom: 13px;
+    }
+    .feedback__name,
+    .feedback__value {
+        font-size: 15px;
+        line-height: 20px;
+
+        &--space {
+            display: none;
+        }
+    }
+    .feedback__title {
+        display: none;
+    }
+    .feedback__rating {
+        margin: 13px 0 0 0;
+    }
+    .feedback__time {
+        margin: 33px 0 0 0;
+    }
+}
+
+@media (max-width: $mobileWidth) {
+    .feedback__button {
+        display: flex;
+        justify-content: center;
+    }
+}
