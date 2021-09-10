@@ -1,9 +1,9 @@
-import './star-rating.scss'
-import { RATING_STARS } from '../../constsnts/constants'
-import React, { useMemo } from 'react'
+import './star-rating.scss';
+import { RATING_STARS } from '../../constsnts/constants';
+import React, { useMemo } from 'react';
 
 function StarRating() {
-    const stars = useMemo(() => [...RATING_STARS].reverse(), [])
+    const stars = useMemo(() => [...RATING_STARS].reverse(), []);
 
     return (
         <div className="star-rating">
@@ -25,7 +25,7 @@ function StarRating() {
                 </React.Fragment>
             ))}
         </div>
-    )
+    );
 }
 
-export default StarRating
+export default StarRating;

@@ -1,8 +1,8 @@
-import icon1 from './img/icon.svg'
-import icon2 from './img/icon (1).svg'
-import icon3 from './img/icon (2).svg'
-import icon4 from './img/icon (3).svg'
-import './icons.scss'
+import icon1 from './img/icon.svg';
+import icon2 from './img/icon (1).svg';
+import icon3 from './img/icon (2).svg';
+import icon4 from './img/icon (3).svg';
+import './icons.scss';
 
 const icons = [
     {
@@ -21,7 +21,7 @@ const icons = [
         icon: icon4,
         text: '1.4 л',
     },
-]
+];
 
 function Icons() {
     return (
@@ -41,7 +41,7 @@ function Icons() {
                 ))}
             </ul>
         </>
-    )
+    );
 }
 
-export default Icons
+export default Icons;

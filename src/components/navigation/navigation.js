@@ -1,5 +1,5 @@
-import '../../visually-hidden/visually-hidden.scss'
-import './navigation.scss'
+import '../../visually-hidden/visually-hidden.scss';
+import './navigation.scss';
 
 const navigation = [
     {
@@ -14,7 +14,7 @@ const navigation = [
     {
         text: 'Вакансии',
     },
-]
+];
 
 function Navigation() {
     return (
@@ -42,7 +42,7 @@ function Navigation() {
                 ))}
             </ul>
         </nav>
-    )
+    );
 }
 
-export default Navigation
+export default Navigation;

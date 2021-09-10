@@ -1,7 +1,7 @@
-import Icons from './description-icons/icons'
-import './description.scss'
-import Button from '../button/button'
-import { ButtonType } from '../../constsnts/constants'
+import Icons from './description-icons/icons';
+import './description.scss';
+import Button from '../button/button';
+import { ButtonType } from '../../constsnts/constants';
 
 function Description() {
     return (
@@ -36,7 +36,7 @@ function Description() {
                 />
             </div>
         </div>
-    )
+    );
 }
 
-export default Description
+export default Description;

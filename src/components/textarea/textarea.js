@@ -1,5 +1,5 @@
-import './textarea.scss'
-import { InputType } from '../../types/types'
+import './textarea.scss';
+import { InputType } from '../../types/types';
 
 function Textarea({ name, label, required, error }) {
     return (
@@ -14,8 +14,8 @@ function Textarea({ name, label, required, error }) {
                 placeholder={label}
             />
         </div>
-    )
+    );
 }
 
-Textarea.propType = { InputType }
-export default Textarea
+Textarea.propType = { InputType };
+export default Textarea;

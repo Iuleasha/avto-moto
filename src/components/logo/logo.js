@@ -1,5 +1,5 @@
-import './logo.scss'
-import logo from './img/logo.svg'
+import './logo.scss';
+import logo from './img/logo.svg';
 
 function Logo() {
     return (
@@ -12,7 +12,7 @@ function Logo() {
                 alt="Логотип"
             />
         </a>
-    )
+    );
 }
 
-export default Logo
+export default Logo;

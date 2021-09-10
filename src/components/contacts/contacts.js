@@ -1,4 +1,4 @@
-import './contacts.scss'
+import './contacts.scss';
 
 function Contacts() {
     return (
@@ -50,7 +50,7 @@ function Contacts() {
                 />
             </div>
         </section>
-    )
+    );
 }
 
-export default Contacts
+export default Contacts;

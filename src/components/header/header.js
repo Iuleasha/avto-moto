@@ -1,6 +1,6 @@
-import Logo from '../logo/logo'
-import Navigation from '../navigation/navigation'
-import './header.scss'
+import Logo from '../logo/logo';
+import Navigation from '../navigation/navigation';
+import './header.scss';
 
 function Header() {
     return (
@@ -11,7 +11,7 @@ function Header() {
                 <Navigation />
             </div>
         </header>
-    )
+    );
 }
 
-export default Header
+export default Header;
