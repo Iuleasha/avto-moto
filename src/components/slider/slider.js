@@ -11,7 +11,7 @@ function Slider() {
     const images = useMemo(() => [slide1, slide2, slide3], [])
     const [activeSlide, setActiveSlide] = useState(0)
 
-    const handleIncreaseActiveSlideClick = useCallback(
+    const onIncreaseActiveSlideClick = useCallback(
         (evt) => {
             evt.preventDefault()
             evt.stopPropagation()
@@ -25,7 +25,7 @@ function Slider() {
         [setActiveSlide, activeSlide, images]
     )
 
-    const handleDecreaseActiveSlideClick = useCallback(
+    const onDecreaseActiveSlideClick = useCallback(
         (evt) => {
             evt.preventDefault()
             evt.stopPropagation()
@@ -55,7 +55,7 @@ function Slider() {
                 <div className="slider__images">
                     <Arrow
                         disabled={activeSlide === 0}
-                        handleClick={handleDecreaseActiveSlideClick}
+                        onArrowClickEvent={onDecreaseActiveSlideClick}
                     />
                     {images.map((item, index) => (
                         <div
@@ -80,7 +80,7 @@ function Slider() {
                     <div className="slider__right-arrow">
                         <Arrow
                             disabled={activeSlide === images.length - 1}
-                            handleClick={handleIncreaseActiveSlideClick}
+                            onArrowClickEvent={onIncreaseActiveSlideClick}
                         />
                     </div>
                 </div>

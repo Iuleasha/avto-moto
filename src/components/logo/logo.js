@@ -3,7 +3,7 @@ import logo from './img/logo.svg'
 
 function Logo() {
     return (
-        <a className="logo__link" href="/">
+        <a className="logo" href="/">
             <img
                 src={logo}
                 className="logo__style"

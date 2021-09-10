@@ -1,4 +1,5 @@
 import './input.scss'
+import { InputType } from '../../types/types'
 
 function Input({ name, label, required, error }) {
     return (
@@ -17,4 +18,5 @@ function Input({ name, label, required, error }) {
     )
 }
 
+Input.propType = { InputType }
 export default Input

@@ -1,12 +1,13 @@
 import './arrow.scss'
+import { ArrowType, DisableArrowType } from '../../../types/types'
 
-function Arrow({ handleClick, disabled }) {
+function Arrow({ onArrowClickEvent, disabled }) {
     return (
         <div
             className={`slider__arrow ${
                 disabled ? 'slider__arrow--disabled' : ''
             }`}
-            onClick={handleClick}
+            onClick={onArrowClickEvent}
         >
             <svg
                 className="slider__svg"
@@ -24,5 +25,7 @@ function Arrow({ handleClick, disabled }) {
         </div>
     )
 }
+
+Arrow.propType = { onArrowClickEvent: ArrowType, disabled: DisableArrowType }
 
 export default Arrow

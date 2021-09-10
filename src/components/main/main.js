@@ -5,7 +5,7 @@ import Description from '../description/description'
 function Main() {
     return (
         <section className="content">
-            <div className="main__wrapper">
+            <div className="content__wrapper">
                 <Slider />
                 <Description />
             </div>

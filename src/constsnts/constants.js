@@ -1,14 +1,14 @@
-export const buttonTypes = {
-    Primary: 'primary',
-    Outline: 'outline',
-    Tabs: 'tabs',
-    ActiveTab: 'active',
+export const ButtonType = {
+    PRIMARY: 'primary',
+    OUTLINE: 'outline',
+    TABS: 'tabs',
+    ACTIVE_TAB: 'active',
 }
 
-export const tabsType = {
-    Characteristics: 'characteristics',
-    Feedback: 'feedback',
-    Contacts: 'contacts',
+export const TabType = {
+    CHARACTERISTICS: 'characteristics',
+    FEEDBACK: 'feedback',
+    CONTACTS: 'contacts',
 }
 export const STARS_LENGTH = 5
 

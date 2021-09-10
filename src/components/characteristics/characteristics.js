@@ -2,7 +2,7 @@ import './characteristics.scss'
 
 function Characteristics() {
     return (
-        <div className="characteristics__list">
+        <div className="characteristics">
             <div className="characteristics__item">
                 <span className="characteristics__title">Трансмиссия</span>
                 <span className="characteristics__text">Роботизированная</span>

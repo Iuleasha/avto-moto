@@ -1,5 +1,4 @@
 import '../../visually-hidden/visually-hidden.scss'
-import { uniqueId } from '../../utils/utils'
 import './navigation.scss'
 
 const navigation = [
@@ -31,7 +30,7 @@ function Navigation() {
 
             <ul className="nav__list">
                 {navigation.map((item) => (
-                    <li key={uniqueId()} className="nav__item">
+                    <li key={item.text} className="nav__item">
                         <a
                             className="nav__list-link"
                             aria-label={item.text}
