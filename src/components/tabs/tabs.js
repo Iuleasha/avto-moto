@@ -1,13 +1,13 @@
-import Button from '../button/button'
-import { ButtonType, TabType } from '../../constsnts/constants'
-import './tabs.scss'
-import { useState } from 'react'
-import Characteristics from '../characteristics/characteristics'
-import Feedback from '../feedback/feedback'
-import Contacts from '../contacts/contacts'
+import Button from '../button/button';
+import { ButtonType, TabType } from '../../constsnts/constants';
+import './tabs.scss';
+import { useState } from 'react';
+import Characteristics from '../characteristics/characteristics';
+import Feedback from '../feedback/feedback';
+import Contacts from '../contacts/contacts';
 
 function Tabs() {
-    const [tab, switchTab] = useState(TabType.CHARACTERISTICS)
+    const [tab, switchTab] = useState(TabType.CHARACTERISTICS);
     return (
         <div className="content tabs">
             <div className="tabs__wrapper">
@@ -19,7 +19,7 @@ function Tabs() {
                             : ButtonType.TABS
                     }
                     onClickEvent={() => {
-                        switchTab(TabType.CHARACTERISTICS)
+                        switchTab(TabType.CHARACTERISTICS);
                     }}
                 />
                 <Button
@@ -30,7 +30,7 @@ function Tabs() {
                             : ButtonType.TABS
                     }
                     onClickEvent={() => {
-                        switchTab(TabType.FEEDBACK)
+                        switchTab(TabType.FEEDBACK);
                     }}
                 />
                 <Button
@@ -41,7 +41,7 @@ function Tabs() {
                             : ButtonType.TABS
                     }
                     onClickEvent={() => {
-                        switchTab(TabType.CONTACTS)
+                        switchTab(TabType.CONTACTS);
                     }}
                 />
             </div>
@@ -50,7 +50,7 @@ function Tabs() {
             {tab === TabType.FEEDBACK && <Feedback />}
             {tab === TabType.CONTACTS && <Contacts />}
         </div>
-    )
+    );
 }
 
-export default Tabs
+export default Tabs;

@@ -1,6 +1,6 @@
-import Slider from '../slider/slider'
-import './main.scss'
-import Description from '../description/description'
+import Slider from '../slider/slider';
+import './main.scss';
+import Description from '../description/description';
 
 function Main() {
     return (
@@ -10,7 +10,7 @@ function Main() {
                 <Description />
             </div>
         </section>
-    )
+    );
 }
 
-export default Main
+export default Main;

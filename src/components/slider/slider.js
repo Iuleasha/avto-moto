@@ -1,43 +1,43 @@
-import slide1 from './img/slide_1.jpg'
-import slide2 from './img/slide_2.jpg'
-import slide3 from './img/slide_3.jpg'
-import '../../visually-hidden/visually-hidden.scss'
-import './slider.scss'
-import Arrow from './arrow/arrow'
-import { useCallback, useMemo, useState } from 'react'
-import { uniqueId } from '../../utils/utils'
+import slide1 from './img/slide_1.jpg';
+import slide2 from './img/slide_2.jpg';
+import slide3 from './img/slide_3.jpg';
+import '../../visually-hidden/visually-hidden.scss';
+import './slider.scss';
+import Arrow from './arrow/arrow';
+import { useCallback, useMemo, useState } from 'react';
+import { uniqueId } from '../../utils/utils';
 
 function Slider() {
-    const images = useMemo(() => [slide1, slide2, slide3], [])
-    const [activeSlide, setActiveSlide] = useState(0)
+    const images = useMemo(() => [slide1, slide2, slide3], []);
+    const [activeSlide, setActiveSlide] = useState(0);
 
     const onIncreaseActiveSlideClick = useCallback(
         (evt) => {
-            evt.preventDefault()
-            evt.stopPropagation()
+            evt.preventDefault();
+            evt.stopPropagation();
 
             if (activeSlide === images.length - 1) {
-                return
+                return;
             }
 
-            setActiveSlide(activeSlide + 1)
+            setActiveSlide(activeSlide + 1);
         },
         [setActiveSlide, activeSlide, images]
-    )
+    );
 
     const onDecreaseActiveSlideClick = useCallback(
         (evt) => {
-            evt.preventDefault()
-            evt.stopPropagation()
+            evt.preventDefault();
+            evt.stopPropagation();
 
             if (activeSlide === 0) {
-                return
+                return;
             }
 
-            setActiveSlide(activeSlide - 1)
+            setActiveSlide(activeSlide - 1);
         },
         [setActiveSlide, activeSlide]
-    )
+    );
 
     return (
         <>
@@ -86,7 +86,7 @@ function Slider() {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default Slider
+export default Slider;

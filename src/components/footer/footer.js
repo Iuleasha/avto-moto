@@ -1,10 +1,10 @@
-import './footer.scss'
+import './footer.scss';
 
 function Footer() {
     return (
         <footer className="footer">
             <ul className="content footer__wrapper">
-                <li className="footer-item ">
+                <li className="footer__item ">
                     <a
                         className="footer__link"
                         aria-label="Корпоративным клиентам"
@@ -57,7 +57,7 @@ function Footer() {
                 </li>
             </ul>
         </footer>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

@@ -1,4 +1,4 @@
-import './characteristics.scss'
+import './characteristics.scss';
 
 function Characteristics() {
     return (
@@ -40,7 +40,7 @@ function Characteristics() {
                 <span className="characteristics__text">4</span>
             </div>
         </div>
-    )
+    );
 }
 
-export default Characteristics
+export default Characteristics;

@@ -1,27 +1,27 @@
-import Button from '../button/button'
-import React, { useEffect, useState } from 'react'
-import { ButtonType, RATING_STARS } from '../../constsnts/constants'
-import './feedback.scss'
-import { getRating, getTimeAgo } from '../../utils/utils'
-import FeedbackDialog from '../feedback-dialog/feedbackDialog'
-import { feedbackArray, getComments } from '../../services/comments.service'
+import Button from '../button/button';
+import React, { useEffect, useState } from 'react';
+import { ButtonType, RATING_STARS } from '../../constsnts/constants';
+import './feedback.scss';
+import { getRating, getTimeAgo } from '../../utils/utils';
+import FeedbackDialog from '../feedback-dialog/feedbackDialog';
+import { feedbackArray, getComments } from '../../services/comments.service';
 
 function Feedback() {
-    const _comments = feedbackArray
-    const [comments, setComments] = useState(_comments)
-    const [popupStatus, switchPopup] = useState(false)
+    const _comments = feedbackArray;
+    const [comments, setComments] = useState(_comments);
+    const [popupStatus, switchPopup] = useState(false);
 
     useEffect(() => {
         if (popupStatus) {
-            document.body.style.overflow = 'hidden'
+            document.body.style.overflow = 'hidden';
         } else {
-            document.body.style.overflow = 'unset'
+            document.body.style.overflow = 'unset';
         }
-    }, [popupStatus])
+    }, [popupStatus]);
 
     useEffect(() => {
-        setComments(getComments())
-    }, [_comments])
+        setComments(getComments());
+    }, [_comments]);
 
     return (
         <div className="feedback">
@@ -29,8 +29,8 @@ function Feedback() {
                 <Button
                     label="оставить отзыв"
                     type={ButtonType.OUTLINE}
-                    clickHandler={() => {
-                        switchPopup(true)
+                    onClickEvent={() => {
+                        switchPopup(true);
                     }}
                 />
             </div>
@@ -61,9 +61,14 @@ function Feedback() {
                     <p className="feedback__value">{item.comment}</p>
                     {item.rating && (
                         <div className="feedback__rating">
-                            {RATING_STARS.map((ratingItem) => (
+                            {RATING_STARS.map((ratingItem, index) => (
                                 <span
-                                    key={item.name + item.date + item.rating}
+                                    key={
+                                        item.name +
+                                        item.date +
+                                        item.rating +
+                                        index
+                                    }
                                     className={`feedback__rating-star ${
                                         String(ratingItem) === item.rating
                                             ? 'feedback__rating-star--active'
@@ -93,7 +98,7 @@ function Feedback() {
                 <FeedbackDialog onCloseEvent={() => switchPopup(false)} />
             )}
         </div>
-    )
+    );
 }
 
-export default Feedback
+export default Feedback;

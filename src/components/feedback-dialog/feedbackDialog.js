@@ -1,6 +1,6 @@
-import './feedbackDialog.scss'
-import FeedbackForm from '../feedback-form/feedback-form'
-import { FeedbackDialogType } from '../../types/types'
+import './feedbackDialog.scss';
+import FeedbackForm from '../feedback-form/feedback-form';
+import { FeedbackDialogType } from '../../types/types';
 
 function FeedbackDialog({ onCloseEvent }) {
     return (
@@ -17,8 +17,8 @@ function FeedbackDialog({ onCloseEvent }) {
                 <FeedbackForm onCloseDialogEvent={onCloseEvent} />
             </div>
         </div>
-    )
+    );
 }
 
-FeedbackDialog.propTypes = { onCloseEvent: FeedbackDialogType }
-export default FeedbackDialog
+FeedbackDialog.propTypes = { onCloseEvent: FeedbackDialogType };
+export default FeedbackDialog;

@@ -1,7 +1,7 @@
-import Header from './components/header/header'
-import Main from './components/main/main'
-import Tabs from './components/tabs/tabs'
-import Footer from './components/footer/footer'
+import Header from './components/header/header';
+import Main from './components/main/main';
+import Tabs from './components/tabs/tabs';
+import Footer from './components/footer/footer';
 
 function App() {
     return (
@@ -11,7 +11,7 @@ function App() {
             <Tabs />
             <Footer />
         </>
-    )
+    );
 }
 
-export default App
+export default App;

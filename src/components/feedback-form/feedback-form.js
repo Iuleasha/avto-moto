@@ -1,48 +1,48 @@
-import './feedback-form.scss'
-import Button from '../button/button'
-import Input from '../input/input'
-import StarRating from '../star-rating/star-rating'
-import Textarea from '../textarea/textarea'
-import { addComments } from '../../services/comments.service'
-import { useState } from 'react'
-import { FeedbackFormType } from '../../types/types'
+import './feedback-form.scss';
+import Button from '../button/button';
+import Input from '../input/input';
+import StarRating from '../star-rating/star-rating';
+import Textarea from '../textarea/textarea';
+import { addComments } from '../../services/comments.service';
+import { useState } from 'react';
+import { FeedbackFormType } from '../../types/types';
 
 function FeedbackForm({ onCloseDialogEvent }) {
-    const [errorName, setNameError] = useState(false)
-    const [errorComment, setCommentError] = useState(false)
+    const [errorName, setNameError] = useState(false);
+    const [errorComment, setCommentError] = useState(false);
     const handleSubmit = (e) => {
-        e.preventDefault()
-        e.stopPropagation()
+        e.preventDefault();
+        e.stopPropagation();
 
-        const data = new FormData(e.target)
+        const data = new FormData(e.target);
 
-        setNameError(false)
-        setCommentError(false)
+        setNameError(false);
+        setCommentError(false);
 
         if (!data.get('name') || !data.get('comment')) {
             if (!data.get('name')) {
-                setNameError(true)
+                setNameError(true);
             }
 
             if (!data.get('comment')) {
-                setCommentError(true)
+                setCommentError(true);
             }
 
-            return
+            return;
         }
 
-        let object = {}
+        let object = {};
 
         data.forEach(function (value, key) {
             if (value) {
-                object[key] = value
-                object.date = new Date()
+                object[key] = value;
+                object.date = new Date();
             }
-        })
+        });
 
-        addComments(object)
-        onCloseDialogEvent()
-    }
+        addComments(object);
+        onCloseDialogEvent();
+    };
 
     return (
         <form className="feedback__form" onSubmit={handleSubmit}>
@@ -89,8 +89,8 @@ function FeedbackForm({ onCloseDialogEvent }) {
                 <Button label="Оставить отзыв" />
             </div>
         </form>
-    )
+    );
 }
 
-FeedbackForm.propTypes = { onCloseDialogEvent: FeedbackFormType }
-export default FeedbackForm
+FeedbackForm.propTypes = { onCloseDialogEvent: FeedbackFormType };
+export default FeedbackForm;

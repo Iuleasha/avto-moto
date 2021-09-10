@@ -1,5 +1,5 @@
-import './arrow.scss'
-import { ArrowType, DisableArrowType } from '../../../types/types'
+import './arrow.scss';
+import { ArrowType, DisableArrowType } from '../../../types/types';
 
 function Arrow({ onArrowClickEvent, disabled }) {
     return (
@@ -23,9 +23,9 @@ function Arrow({ onArrowClickEvent, disabled }) {
                 />
             </svg>
         </div>
-    )
+    );
 }
 
-Arrow.propType = { onArrowClickEvent: ArrowType, disabled: DisableArrowType }
+Arrow.propType = { onArrowClickEvent: ArrowType, disabled: DisableArrowType };
 
-export default Arrow
+export default Arrow;
