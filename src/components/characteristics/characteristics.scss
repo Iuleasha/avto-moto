@@ -1,6 +1,6 @@
 @import '../../variables/variables';
 
-.characteristics__list {
+.characteristics {
     width: 565px;
 }
 
@@ -17,7 +17,7 @@
 }
 
 @media (max-width: $tabletWidth) {
-    .characteristics__list {
+    .characteristics {
         width: 100%;
         margin-top: 35px;
     }

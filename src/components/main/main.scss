@@ -1,13 +1,13 @@
 @import '../../variables/variables';
 
-.main__wrapper {
+.content__wrapper {
     display: flex;
     margin: 74px 0 90px;
     padding: 0 18px;
 }
 
 @media screen and (max-width: $tabletWidth) {
-    .main__wrapper {
+    .content__wrapper {
         margin: 20px 0 30px 0;
         flex-wrap: wrap;
         padding: 0 21px;

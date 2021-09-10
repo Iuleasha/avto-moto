@@ -2,7 +2,6 @@ import icon1 from './img/icon.svg'
 import icon2 from './img/icon (1).svg'
 import icon3 from './img/icon (2).svg'
 import icon4 from './img/icon (3).svg'
-import { uniqueId } from '../../../utils/utils'
 import './icons.scss'
 
 const icons = [
@@ -29,13 +28,13 @@ function Icons() {
         <>
             <ul className="icons">
                 {icons.map((item) => (
-                    <li key={uniqueId()} className="icons__item">
+                    <li key={item.text} className="icons__item">
                         <div className="icons__wrapper">
                             <img
                                 src={item.icon}
                                 className="icons__image"
                                 alt={item.text}
-                            ></img>
+                            />
                         </div>
                         <span className="icons__text"> {item.text}</span>
                     </li>

@@ -4,8 +4,8 @@ import './header.scss'
 
 function Header() {
     return (
-        <header className="page__header">
-            <div className="content page__header-wrapper">
+        <header className="header">
+            <div className="content header-wrapper">
                 <Logo />
 
                 <Navigation />

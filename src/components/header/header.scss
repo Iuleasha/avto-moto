@@ -1,10 +1,10 @@
 @import '../../variables/variables';
 
-.page__header {
+.header {
     background-color: $headerFooterBackground;
 }
 
-.page__header-wrapper {
+.header-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 15px 6px;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: $tabletWidth) {
-    .page__header-wrapper {
+    .header-wrapper {
         padding: 15px;
     }
 }

@@ -5,8 +5,9 @@ import StarRating from '../star-rating/star-rating'
 import Textarea from '../textarea/textarea'
 import { addComments } from '../../services/comments.service'
 import { useState } from 'react'
+import { FeedbackFormType } from '../../types/types'
 
-function FeedbackForm({ closeDialog }) {
+function FeedbackForm({ onCloseDialogEvent }) {
     const [errorName, setNameError] = useState(false)
     const [errorComment, setCommentError] = useState(false)
     const handleSubmit = (e) => {
@@ -40,7 +41,7 @@ function FeedbackForm({ closeDialog }) {
         })
 
         addComments(object)
-        closeDialog()
+        onCloseDialogEvent()
     }
 
     return (
@@ -91,4 +92,5 @@ function FeedbackForm({ closeDialog }) {
     )
 }
 
+FeedbackForm.propTypes = { onCloseDialogEvent: FeedbackFormType }
 export default FeedbackForm

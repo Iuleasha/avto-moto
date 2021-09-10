@@ -1,5 +1,5 @@
 import Button from '../button/button'
-import { buttonTypes, tabsType } from '../../constsnts/constants'
+import { ButtonType, TabType } from '../../constsnts/constants'
 import './tabs.scss'
 import { useState } from 'react'
 import Characteristics from '../characteristics/characteristics'
@@ -7,48 +7,48 @@ import Feedback from '../feedback/feedback'
 import Contacts from '../contacts/contacts'
 
 function Tabs() {
-    const [tab, switchTab] = useState(tabsType.Characteristics)
+    const [tab, switchTab] = useState(TabType.CHARACTERISTICS)
     return (
         <div className="content tabs">
             <div className="tabs__wrapper">
                 <Button
                     label="Характеристики"
                     type={
-                        tab === tabsType.Characteristics
-                            ? buttonTypes.ActiveTab
-                            : buttonTypes.Tabs
+                        tab === TabType.CHARACTERISTICS
+                            ? ButtonType.ACTIVE_TAB
+                            : ButtonType.TABS
                     }
-                    clickHandler={() => {
-                        switchTab(tabsType.Characteristics)
+                    onClickEvent={() => {
+                        switchTab(TabType.CHARACTERISTICS)
                     }}
                 />
                 <Button
                     label="Отзывы"
                     type={
-                        tab === tabsType.Feedback
-                            ? buttonTypes.ActiveTab
-                            : buttonTypes.Tabs
+                        tab === TabType.FEEDBACK
+                            ? ButtonType.ACTIVE_TAB
+                            : ButtonType.TABS
                     }
-                    clickHandler={() => {
-                        switchTab(tabsType.Feedback)
+                    onClickEvent={() => {
+                        switchTab(TabType.FEEDBACK)
                     }}
                 />
                 <Button
                     label="Контакты"
                     type={
-                        tab === tabsType.Contacts
-                            ? buttonTypes.ActiveTab
-                            : buttonTypes.Tabs
+                        tab === TabType.CONTACTS
+                            ? ButtonType.ACTIVE_TAB
+                            : ButtonType.TABS
                     }
-                    clickHandler={() => {
-                        switchTab(tabsType.Contacts)
+                    onClickEvent={() => {
+                        switchTab(TabType.CONTACTS)
                     }}
                 />
             </div>
-            {tab === tabsType.Characteristics && <Characteristics />}
+            {tab === TabType.CHARACTERISTICS && <Characteristics />}
 
-            {tab === tabsType.Feedback && <Feedback />}
-            {tab === tabsType.Contacts && <Contacts />}
+            {tab === TabType.FEEDBACK && <Feedback />}
+            {tab === TabType.CONTACTS && <Contacts />}
         </div>
     )
 }

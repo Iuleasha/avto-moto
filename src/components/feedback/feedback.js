@@ -1,9 +1,9 @@
 import Button from '../button/button'
 import React, { useEffect, useState } from 'react'
-import { buttonTypes, RATING_STARS } from '../../constsnts/constants'
+import { ButtonType, RATING_STARS } from '../../constsnts/constants'
 import './feedback.scss'
-import { getRating, getTimeAgo, uniqueId } from '../../utils/utils'
-import FeedbackDialog from '../popup/feedbackDialog'
+import { getRating, getTimeAgo } from '../../utils/utils'
+import FeedbackDialog from '../feedback-dialog/feedbackDialog'
 import { feedbackArray, getComments } from '../../services/comments.service'
 
 function Feedback() {
@@ -28,14 +28,14 @@ function Feedback() {
             <div className="feedback__button">
                 <Button
                     label="оставить отзыв"
-                    type={buttonTypes.Outline}
+                    type={ButtonType.OUTLINE}
                     clickHandler={() => {
                         switchPopup(true)
                     }}
                 />
             </div>
             {comments.map((item) => (
-                <div className="feedback__item" key={uniqueId()}>
+                <div className="feedback__item" key={item.date}>
                     <p className="feedback__name">{item.name}</p>
                     {item.dignity && (
                         <>
@@ -63,7 +63,7 @@ function Feedback() {
                         <div className="feedback__rating">
                             {RATING_STARS.map((ratingItem) => (
                                 <span
-                                    key={uniqueId()}
+                                    key={item.name + item.date + item.rating}
                                     className={`feedback__rating-star ${
                                         String(ratingItem) === item.rating
                                             ? 'feedback__rating-star--active'
@@ -90,7 +90,7 @@ function Feedback() {
                 </div>
             ))}
             {popupStatus && (
-                <FeedbackDialog clickHandler={() => switchPopup(false)} />
+                <FeedbackDialog onCloseEvent={() => switchPopup(false)} />
             )}
         </div>
     )

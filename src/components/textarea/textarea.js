@@ -1,4 +1,5 @@
 import './textarea.scss'
+import { InputType } from '../../types/types'
 
 function Textarea({ name, label, required, error }) {
     return (
@@ -16,4 +17,5 @@ function Textarea({ name, label, required, error }) {
     )
 }
 
+Textarea.propType = { InputType }
 export default Textarea

@@ -2,65 +2,53 @@ import './footer.scss'
 
 function Footer() {
     return (
-        <footer className="page__footer">
-            <ul className="content page__footer-wrapper">
-                <li className="page__footer-item ">
+        <footer className="footer">
+            <ul className="content footer__wrapper">
+                <li className="footer-item ">
                     <a
-                        className="page__footer-link"
+                        className="footer__link"
                         aria-label="Корпоративным клиентам"
                         href="/"
                     >
                         Корпоративным клиентам
                     </a>
                 </li>
-                <li className="page__footer-item ">
-                    <a
-                        className="page__footer-link"
-                        aria-label="Клиентам"
-                        href="/"
-                    >
+                <li className="footer__item ">
+                    <a className="footer__link" aria-label="Клиентам" href="/">
                         Клиентам
                     </a>
                 </li>
-                <li className="page__footer-item ">
+                <li className="footer__item ">
                     <a
-                        className="page__footer-link"
+                        className="footer__link"
                         aria-label="Аренда авто"
                         href="/"
                     >
                         Аренда авто
                     </a>
                 </li>
-                <li className="page__footer-item ">
-                    <a
-                        className="page__footer-link"
-                        aria-label="Каршеринг"
-                        href="/"
-                    >
+                <li className="footer__item ">
+                    <a className="footer__link" aria-label="Каршеринг" href="/">
                         Каршеринг
                     </a>
                 </li>
-                <li className="page__footer-item ">
+                <li className="footer__item ">
                     <a
-                        className="page__footer-link"
+                        className="footer__link"
                         aria-label="Как продать авто"
                         href="/"
                     >
                         Как продать авто
                     </a>
                 </li>
-                <li className="page__footer-item ">
-                    <a
-                        className="page__footer-link"
-                        aria-label="Trade-in"
-                        href="/"
-                    >
+                <li className="footer__item ">
+                    <a className="footer__link" aria-label="Trade-in" href="/">
                         Trade-in
                     </a>
                 </li>
-                <li className="page__footer-item ">
+                <li className="footer__item">
                     <a
-                        className="page__footer-link"
+                        className="footer__link"
                         aria-label="Test drive"
                         href="/"
                     >

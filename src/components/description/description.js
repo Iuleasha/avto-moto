@@ -1,7 +1,7 @@
 import Icons from './description-icons/icons'
 import './description.scss'
 import Button from '../button/button'
-import { buttonTypes } from '../../constsnts/constants'
+import { ButtonType } from '../../constsnts/constants'
 
 function Description() {
     return (
@@ -32,7 +32,7 @@ function Description() {
                 </div>
                 <Button
                     label="В кредит от 11 000 ₽"
-                    type={buttonTypes.Outline}
+                    type={ButtonType.OUTLINE}
                 />
             </div>
         </div>
