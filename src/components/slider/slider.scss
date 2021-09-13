@@ -2,12 +2,12 @@
 
 .slider {
     width: 600px;
-    margin-top: 16px;
+    margin-top: 17px;
 }
 
 .slider__active {
     position: relative;
-    margin-bottom: 39px;
+    margin-bottom: 34px;
     width: 100%;
 }
 
@@ -35,6 +35,7 @@
 
 .slider__thumbnails {
     width: 128px;
+    background-color: $headerFooterBackground;
 }
 
 .slider__right-arrow {
@@ -47,7 +48,6 @@
 }
 
 .slider__image {
-    background-color: $headerFooterBackground;
     width: 100%;
 }
 

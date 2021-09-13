@@ -6,8 +6,6 @@
 }
 
 .star-rating__input {
-    display: none;
-
     &:checked {
         ~ .star-rating__label {
             &:after {
