@@ -9,6 +9,11 @@
     display: none;
 }
 
+.nav__menu-wrapper,
+.nav-toggle {
+    display: none;
+}
+
 .nav__list {
     margin: 0;
     padding: 0;
@@ -40,6 +45,10 @@
 }
 
 @media screen and (max-width: $tabletWidth) {
+    .nav-toggle {
+        display: block;
+    }
+
     .nav__list {
         display: none;
     }

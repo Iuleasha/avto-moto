@@ -10,7 +10,7 @@ function StarRating() {
             {stars.map((item) => (
                 <React.Fragment key={`star-rating-${item}`}>
                     <input
-                        className="star-rating__input"
+                        className="star-rating__input visually-hidden"
                         id={`star-${item}`}
                         type="radio"
                         name="rating"
