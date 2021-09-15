@@ -4,7 +4,7 @@
     width: 100%;
     min-height: 118px;
     border: 1px solid rgba(72, 73, 77, 0.2);
-    padding: 15px 25px;
+    padding: 14px 25px;
     font-size: 14px;
     line-height: 19px;
     resize: none;
@@ -24,7 +24,7 @@
     &:after {
         content: '*';
         position: absolute;
-        top: 12px;
+        top: 6px;
         left: 12px;
         font-size: 17px;
         color: $activeButtonColor;

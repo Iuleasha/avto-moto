@@ -1,9 +1,11 @@
 import './feedbackDialog.scss';
 import FeedbackForm from '../feedback-form/feedback-form';
 import { FeedbackDialogType } from '../../types/types';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 function FeedbackDialog({ onCloseEvent }) {
+    const dialogEl = useRef(null);
+
     const onCloseDialogEvent = useCallback(
         (evt) => {
             if (
@@ -16,6 +18,10 @@ function FeedbackDialog({ onCloseEvent }) {
         [onCloseEvent]
     );
 
+    const onSetAutoFocusEvent = useCallback(() => {
+        dialogEl.current.querySelector('input').focus();
+    }, []);
+
     useEffect(() => {
         document.addEventListener('keydown', onCloseDialogEvent, false);
 
@@ -25,19 +31,24 @@ function FeedbackDialog({ onCloseEvent }) {
     }, [onCloseDialogEvent]);
 
     return (
-        <div className="dialog__overlay" onClick={onCloseDialogEvent}>
+        <dialog
+            ref={dialogEl}
+            className="dialog__overlay"
+            onClick={onCloseDialogEvent}
+        >
             <div className="dialog__content">
+                <h3 className="dialog__title">Оставить отзыв</h3>
+
+                <FeedbackForm onCloseDialogEvent={onCloseEvent} />
+
                 <button
                     className="dialog__close-button"
                     aria-label="Закрыть"
                     onClick={onCloseEvent}
+                    onBlur={onSetAutoFocusEvent}
                 />
-
-                <h3 className="dialog__title">Оставить отзыв</h3>
-
-                <FeedbackForm onCloseDialogEvent={onCloseEvent} />
             </div>
-        </div>
+        </dialog>
     );
 }
 
