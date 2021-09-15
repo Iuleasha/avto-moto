@@ -59,6 +59,7 @@ function FeedbackForm({ onCloseDialogEvent }) {
                             label="Имя"
                             required={true}
                             error={errorName}
+                            autoFocus={true}
                         />
                     </div>
                     <div className="feedback__form-row">

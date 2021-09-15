@@ -1,7 +1,7 @@
 import './input.scss';
 import { InputType } from '../../types/types';
 
-function Input({ name, label, required, error }) {
+function Input({ name, label, required, autoFocus = false, error }) {
     return (
         <div className={`input-wrapper ${required ? 'input--required' : ''}`}>
             <input
@@ -9,6 +9,7 @@ function Input({ name, label, required, error }) {
                 type="text"
                 placeholder={label}
                 name={name}
+                autoFocus={autoFocus}
                 id={name}
             />
             <label className="visually-hidden" htmlFor={name}>

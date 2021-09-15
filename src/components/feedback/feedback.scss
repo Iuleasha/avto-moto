@@ -15,6 +15,7 @@
     border-bottom: $itemFeedbackLine;
     padding-bottom: 20px;
     margin: 0 0 20px 0;
+    word-break: break-word;
 }
 
 .feedback__name {
@@ -83,20 +84,6 @@
         line-height: 22px;
         cursor: pointer;
     }
-}
-
-.feedback__rating-stars {
-    display: flex;
-    margin: 20px 0 30px 0;
-}
-
-.feedback__rating-star {
-    color: $activeButtonColor;
-    margin-right: 5px;
-}
-
-.feedback__rating-star--active ~ .feedback__rating-star {
-    color: $starColor;
 }
 
 @media (max-width: $tabletWidth) {

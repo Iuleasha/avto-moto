@@ -12,13 +12,17 @@
 
 .description__price {
     margin: 36px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 
 .description__actual-price {
     font-weight: 700;
     font-size: 35px;
     line-height: 48px;
-    margin-right: 36px;
+    margin-right: 32px;
 }
 
 .description__old-price {
@@ -26,12 +30,19 @@
     font-size: 21px;
     line-height: 27px;
     position: relative;
-}
+    display: inline-block;
 
-.description__old-line {
-    position: absolute;
-    top: 6px;
-    right: -12px;
+    &:before {
+        content: '';
+        width: 105%;
+        height: 1px;
+        background: #a3a4a6;
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-5deg);
+    }
 }
 
 .description__primary {
